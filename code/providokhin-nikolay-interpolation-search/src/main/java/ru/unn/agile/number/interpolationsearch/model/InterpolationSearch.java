@@ -27,7 +27,7 @@ public class InterpolationSearch {
     public int interpSearch(int elementToSearch) {
 
         int startIndex = 0;
-        int lastIndex = size - 1;
+        int lastIndex = array.length - 1;
 
         if(checkSortArray()){
             while ((startIndex <= lastIndex) && (elementToSearch >= array[startIndex]) &&
