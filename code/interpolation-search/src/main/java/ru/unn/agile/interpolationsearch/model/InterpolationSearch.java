@@ -1,4 +1,4 @@
-package ru.unn.agile.number.interpolationsearch.model;
+package ru.unn.agile.interpolationsearch.model;
 
 public class InterpolationSearch {
 
@@ -43,11 +43,13 @@ public class InterpolationSearch {
 
                 if (array[pos] < elementToSearch) {
                     startIndex = pos + 1;
-                } else {
+                }
+                else {
                     lastIndex = pos - 1;
                 }
             }
-            return -1;
+
         }
+        return -1;
     }
 }

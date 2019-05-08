@@ -1,4 +1,4 @@
-package ru.unn.agile.number.interpolationsearch.model;
+package ru.unn.agile.interpolationsearch.model;
 
 import org.junit.Test;
 
