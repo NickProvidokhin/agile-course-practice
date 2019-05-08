@@ -3,7 +3,6 @@ package ru.unn.agile.interpolationsearch.model;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class InterpolationSearchTests {
 
