@@ -11,7 +11,6 @@ public class InterpolationSearchTests {
     public void initializeInterpolationSearch() {
         int[] array = {0, 1, 2, 3, 4, 5, 6, 7};
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
-
         assertEquals(array, interpolationSearch.getArray());
     }
 
@@ -25,7 +24,6 @@ public class InterpolationSearchTests {
     public void identifyUnsortedArray() {
         int[] array = {0, 9, 5, 3, 6};
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
-
         interpolationSearch.checkSortArray();
     }
 
@@ -34,7 +32,6 @@ public class InterpolationSearchTests {
         int[] array = {0, 1, 2, 3, 5, 6};
         int key = 4;
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
-
         assertEquals(-1, interpolationSearch.interpSearch(key));
     }
 

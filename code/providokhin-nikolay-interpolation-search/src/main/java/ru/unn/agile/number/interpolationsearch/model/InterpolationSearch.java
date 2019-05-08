@@ -2,24 +2,22 @@ package ru.unn.agile.number.interpolationsearch.model;
 
 public class InterpolationSearch {
 
-    public int size;
-    public int[] array;
-
-    public InterpolationSearch(final int[] _array) {
-        if (_array.length != 0) {
-            array = _array;
-            size = _array.length;
-        } else {
-            throw new NullPointerException("Size of array is null");
-        }
-    }
+    private int[] array;
 
     public int[] getArray() {
         return array;
     }
 
+    public InterpolationSearch(final int[] param_array) {
+        if (param_array.length != 0) {
+            array = param_array;
+        } else {
+            throw new NullPointerException("Size of array is null");
+        }
+    }
+
     public boolean checkSortArray() {
-        for (int i = 0; i < size-1; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] > array[i-1]) {
                 throw new NullPointerException("Array don't sort");
             }
