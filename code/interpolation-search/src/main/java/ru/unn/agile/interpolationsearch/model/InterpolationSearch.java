@@ -43,8 +43,7 @@ public class InterpolationSearch {
 
                 if (array[pos] < elementToSearch) {
                     startIndex = pos + 1;
-                }
-                else {
+                } else {
                     lastIndex = pos - 1;
                 }
             }
