@@ -453,3 +453,11 @@ include "code/zharikov_alexey_HashMap/View"
 project(":code/zharikov_alexey_HashMap/View").name = "MyHashMap-View"
 include "code/zharikov_alexey_HashMap/Infrastructure"
 project(":code/zharikov_alexey_HashMap/Infrastructure").name = "MyHashMap-Infrastructure"
+
+//Providokhin, interpolation Search
+include "code/interpolation-search/Model"
+project(":code/interpolation-search/Model").name = "interpolation-search-Model"
+include "code/interpolation-search/ViewModel"
+project(":code/interpolation-search/ViewModel").name = "interpolation-search-ViewModel"
+include "code/interpolation-search/View"
+project(":code/interpolation-search/View").name = "interpolation-search-View"
