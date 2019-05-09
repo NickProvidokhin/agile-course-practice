@@ -17,8 +17,8 @@ public class InterpolationSearch {
     }
 
     public boolean checkSortArray() {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > array[i - 1]) {
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < array[i - 1]) {
                 throw new NullPointerException("Array don't sort");
             }
         }
@@ -31,11 +31,10 @@ public class InterpolationSearch {
         int lastIndex = array.length - 1;
 
         if (checkSortArray()) {
-            while ((startIndex <= lastIndex) && (elementToSearch >= array[startIndex])
-                    && (elementToSearch <= array[lastIndex])) {
-                int pos = startIndex + (((lastIndex - startIndex)
-                        / (array[lastIndex] - array[startIndex]))
-                        * (elementToSearch - array[startIndex]));
+            while ((elementToSearch >= array[startIndex]) && (elementToSearch <= array[lastIndex])) {
+                int pos = startIndex + ((elementToSearch - array[startIndex])
+                * (lastIndex - startIndex))
+                        / (array[lastIndex] - array[startIndex]);
 
                 if (array[pos] == elementToSearch) {
                     return pos;
@@ -51,4 +50,5 @@ public class InterpolationSearch {
         }
         return -1;
     }
+
 }
