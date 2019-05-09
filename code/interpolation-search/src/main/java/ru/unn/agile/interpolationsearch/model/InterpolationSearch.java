@@ -31,7 +31,8 @@ public class InterpolationSearch {
         int lastIndex = array.length - 1;
 
         if (checkSortArray()) {
-            while ((elementToSearch >= array[startIndex]) && (elementToSearch <= array[lastIndex])) {
+            while ((elementToSearch >= array[startIndex])
+                    && (elementToSearch <= array[lastIndex])) {
                 int pos = startIndex + ((elementToSearch - array[startIndex])
                 * (lastIndex - startIndex))
                         / (array[lastIndex] - array[startIndex]);
