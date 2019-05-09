@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(final Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("intersearch.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Intersearch.fxml"));
         primaryStage.setTitle("Interpolation Search");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

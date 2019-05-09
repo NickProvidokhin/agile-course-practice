@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="466.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.unn.agile.interpolationsearch.view.intersearch">
+<AnchorPane prefHeight="466.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.unn.agile.interpolationsearch.view.Interserch">
    <children>
       <Label layoutX="61.0" layoutY="103.0" prefHeight="38.0" prefWidth="92.0" text="Enter array:" />
       <Label layoutX="61.0" layoutY="149.0" prefHeight="21.0" prefWidth="83.0" text="Enter key:" />
