@@ -1,4 +1,4 @@
-package ru.unn.agile.interpolationsearch.model;
+package ru.unn.agile.interpolationsearch.Model;
 
 public class InterpolationSearch {
 
