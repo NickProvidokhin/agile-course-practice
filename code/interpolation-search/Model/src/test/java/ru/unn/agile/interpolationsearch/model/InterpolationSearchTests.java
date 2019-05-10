@@ -20,7 +20,7 @@ public class InterpolationSearchTests {
     }
 
     @Test(expected = ExeptionWrongArrray.class)
-    public void identifyUnsortedArray()throws ExeptionWrongArrray{
+    public void identifyUnsortedArray()throws ExeptionWrongArrray {
         int[] array = {0, 9, 5, 3, 6};
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
         interpolationSearch.checkSortArray();
