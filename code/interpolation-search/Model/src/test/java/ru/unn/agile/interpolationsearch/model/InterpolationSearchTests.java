@@ -14,13 +14,13 @@ public class InterpolationSearchTests {
     }
 
     @Test(expected = ExeptionWrongArrray.class)
-    public void canFindEmptyArray() {
+    public void canFindEmptyArray() throws ExeptionWrongArrray {
         int[] array = {};
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
     }
 
     @Test(expected = ExeptionWrongArrray.class)
-    public void identifyUnsortedArray() {
+    public void identifyUnsortedArray()throws ExeptionWrongArrray{
         int[] array = {0, 9, 5, 3, 6};
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
         interpolationSearch.checkSortArray();
