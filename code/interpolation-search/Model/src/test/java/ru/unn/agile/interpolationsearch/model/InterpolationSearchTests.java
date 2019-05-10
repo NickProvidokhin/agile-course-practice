@@ -7,19 +7,19 @@ import static org.junit.Assert.assertEquals;
 public class InterpolationSearchTests {
 
     @Test
-    public void initializeInterpolationSearch() {
+    public void initializeInterpolationSearch() throws ExeptionWrongArrray {
         int[] array = {0, 1, 2, 3, 4, 5, 6, 7};
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
         assertEquals(array, interpolationSearch.getArray());
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test(expected = ExeptionWrongArrray.class)
     public void canFindEmptyArray() {
         int[] array = {};
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test(expected = ExeptionWrongArrray.class)
     public void identifyUnsortedArray() {
         int[] array = {0, 9, 5, 3, 6};
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
@@ -27,7 +27,7 @@ public class InterpolationSearchTests {
     }
 
     @Test
-    public void searchKeyInMiddle() {
+    public void searchKeyInMiddle() throws ExeptionWrongArrray {
         int[] array = {0, 1, 2, 3, 5, 6, 7};
         int key = 3;
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
@@ -35,7 +35,7 @@ public class InterpolationSearchTests {
     }
 
     @Test
-    public void searchKeyInLeft() {
+    public void searchKeyInLeft() throws ExeptionWrongArrray {
         int[] array = {0, 1, 2, 3, 5, 6, 7};
         int key = 1;
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
@@ -43,7 +43,7 @@ public class InterpolationSearchTests {
     }
 
     @Test
-    public void searchKeyRight() {
+    public void searchKeyRight() throws ExeptionWrongArrray {
         int[] array = {0, 1, 2, 3, 5, 6, 7};
         int key = 6;
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);
@@ -51,7 +51,7 @@ public class InterpolationSearchTests {
     }
 
     @Test
-    public void searchIsNotKey() {
+    public void searchIsNotKey() throws ExeptionWrongArrray {
         int[] array = {0, 1, 2, 3, 5, 6, 7};
         int key = 4;
         InterpolationSearch interpolationSearch = new InterpolationSearch(array);

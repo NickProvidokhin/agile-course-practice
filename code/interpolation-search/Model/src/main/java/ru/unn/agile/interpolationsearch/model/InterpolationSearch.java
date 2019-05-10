@@ -8,24 +8,24 @@ public class InterpolationSearch {
         return array;
     }
 
-    public InterpolationSearch(final int[] paramArray) {
+    public InterpolationSearch(final int[] paramArray) throws ExeptionWrongArrray {
         if (paramArray.length != 0) {
             array = paramArray;
         } else {
-            throw new NullPointerException("Size of array is null");
+            throw new ExeptionWrongArrray("Size of array is null");
         }
     }
 
-    public boolean checkSortArray() {
+    public boolean checkSortArray() throws ExeptionWrongArrray {
         for (int i = 1; i < array.length; i++) {
             if (array[i] < array[i - 1]) {
-                throw new NullPointerException("Array don't sort");
+                throw new ExeptionWrongArrray("Array don't sort");
             }
         }
         return true;
     }
 
-    public int interpSearch(final int elementToSearch) {
+    public int interpSearch(final int elementToSearch) throws ExeptionWrongArrray {
 
         int startIndex = 0;
         int lastIndex = array.length - 1;
