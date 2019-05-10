@@ -1,4 +1,4 @@
-package ru.unn.agile.interpolationsearch.view;
+package ru.unn.agile.interpolationsearch.View;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

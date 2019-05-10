@@ -1,4 +1,4 @@
-package ru.unn.agile.interpolationsearch.viewmodel;
+package ru.unn.agile.interpolationsearch.ViewModel;
 
 public class ViewModel {
 }
