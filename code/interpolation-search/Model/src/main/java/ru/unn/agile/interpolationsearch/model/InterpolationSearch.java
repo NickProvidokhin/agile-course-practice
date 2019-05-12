@@ -25,12 +25,12 @@ public class InterpolationSearch {
         return true;
     }
 
-    public int interpSearch(final int elementToSearch) throws ExeptionWrongArrray {
+    public int interpSearch(final int elementToSearch) {
 
         int startIndex = 0;
         int lastIndex = array.length - 1;
 
-        if (checkSortArray()) {
+
             while ((elementToSearch >= array[startIndex])
                     && (elementToSearch <= array[lastIndex])) {
                 int pos = startIndex + ((elementToSearch - array[startIndex])
@@ -48,7 +48,7 @@ public class InterpolationSearch {
                 }
             }
 
-        }
+
         return -1;
     }
 
