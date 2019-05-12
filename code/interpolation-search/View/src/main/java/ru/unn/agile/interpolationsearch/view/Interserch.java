@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import ru.unn.interpolationsearch.viewmodel.ViewModel;
+import ru.unn.agile.interpolationsearch.viewmodel.ViewModel;
 
 public class Interserch {
     @FXML
