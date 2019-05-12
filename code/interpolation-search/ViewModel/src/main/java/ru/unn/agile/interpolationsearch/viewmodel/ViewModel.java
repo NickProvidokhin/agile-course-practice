@@ -24,11 +24,17 @@ public class ViewModel {
     private boolean elementCorrect;
     private final List<ValChanList> valueChangedListeners = new ArrayList<>();
     private ILogger logg;
+    private final StringProperty log = new SimpleStringProperty();
+    public static final String LOG_MES_INP_ARRAY = "Input array: ";
+    public static final String LOG_MES_INP_VALUE = "Input value: ";
+    public static final String LOG_MES_RESULT = "Result: ";
+
     public ViewModel() {
         arrInput.set("");
         keyInput.set("");
         status.set("");
         result.set("");
+        log.set("");
         arrayCorrect = false;
         elementCorrect = false;
         BooleanBinding couldSearch = new BooleanBinding() {
@@ -68,20 +74,32 @@ public class ViewModel {
     public StringProperty arrInputProperty() {
         return arrInput;
     }
+
     public StringProperty keyInputProperty() {
         return keyInput;
     }
+
     public StringProperty statusProperty() {
         return status;
     }
+
     public StringProperty resultProperty() {
         return result;
     }
+
     public void setKeyInputProperty(final String input) {
+        logg.log(LOG_MES_INP_VALUE + input);
+        log.set(String.join(";", logg.getLog()));
         keyInput.set(input);
+
     }
+
     public String getArrayInputProperty() {
         return arrInput.get();
+    }
+
+    public StringProperty logProperty() {
+        return log;
     }
 
     public String getkeyInputProperty() {
@@ -93,6 +111,8 @@ public class ViewModel {
     }
 
     public void setArrayInputProperty(final String input) {
+        logg.log(LOG_MES_INP_ARRAY + input);
+        log.set(String.join(";", logg.getLog()));
         arrInput.set(input);
     }
 
@@ -101,8 +121,11 @@ public class ViewModel {
     }
 
     private void setResultProperty(final String res) {
+        logg.log(LOG_MES_RESULT + res);
+        log.set(String.join(";", logg.getLog()));
         result.set(res);
     }
+
     public String getResultProperty() {
         return result.get();
     }
@@ -114,7 +137,7 @@ public class ViewModel {
         if (position == -1) {
             setResultProperty("Key not found");
         } else {
-            setResultProperty("Position key, index " + Integer.toString(position));
+            setResultProperty("Position key " + Integer.toString(position));
         }
     }
     public boolean isSearchDisabled() {
