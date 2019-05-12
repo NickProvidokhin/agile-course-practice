@@ -1,0 +1,4 @@
+dependencies {
+    compile project(':interpolation-search-ViewModel')
+    testCompile project(':interpolation-search-ViewModel').sourceSets.test.output
+}
