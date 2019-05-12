@@ -23,7 +23,7 @@ public class ViewModel {
     private boolean arrayCorrect;
     private boolean elementCorrect;
     private final List<ValChanList> valueChangedListeners = new ArrayList<>();
-
+    private ILogger logg;
     public ViewModel() {
         arrInput.set("");
         keyInput.set("");
@@ -58,6 +58,12 @@ public class ViewModel {
                             final String oldValue, final String newValue) {
             status.set(getStatus().toString());
         }
+    }
+    public final void setLogger(final ILogger loger) {
+        if (logg == null) {
+            throw new IllegalArgumentException("Logger param can't be null");
+        }
+        this.logg = loger;
     }
     public StringProperty arrInputProperty() {
         return arrInput;

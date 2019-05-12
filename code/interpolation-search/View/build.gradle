@@ -1,4 +1,5 @@
 apply from: rootDir.getAbsolutePath() + '/config/scripts/javafx.plugin'
         dependencies {
             compile project(':interpolation-search-ViewModel')
+			compile project(':interpolation-search-Infrastructure')
         }

@@ -1,8 +1,24 @@
 package ru.unn.agile.interpolationsearch.viewmodel;
 
+import org.junit.Before;
+
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 public class ViewModelTests {
+    private ViewModel viewModel;
+    private ILogger logg;
+    public void createViewModelWithLogger(final ILogger logg) {
+        viewModel = new ViewModel();
+        viewModel.setLogger(logg);
+    }
+
+    @Before
+    public void  setUp() throws IOException {
+        logg = new FakeLogger();
+        this.createViewModelWithLogger(logg);
+    }
     public void doInitArray() {
         ViewModel viewModel = new ViewModel();
 
