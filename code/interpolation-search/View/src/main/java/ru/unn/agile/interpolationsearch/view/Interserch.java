@@ -8,8 +8,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import ru.unn.interpolationsearch.viewmodel.ViewModel;
 
-import java.io.IOException;
-
 public class Interserch {
     @FXML
     private ViewModel viewModel;
