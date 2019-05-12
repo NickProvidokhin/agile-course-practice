@@ -1,4 +1,4 @@
-package ru.unn.agile.interpolationsearch.View;
+package ru.unn.agile.interpolationsearch.view;
 
 public class Interserch {
 }
